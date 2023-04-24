@@ -1,0 +1,52 @@
+.destination{
+    height: 100vh;
+    background-image: url(../../assets/images/destination/background-destination-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    padding-top: 200px;
+}
+
+.container{
+    width: 900px;
+    margin: auto;
+    max-width: 100%;
+}
+
+.sub__nav{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav_link{
+    border: none;
+}
+
+.nav_link.active{
+    padding-block-end: 1rem;
+    border-bottom: 4px solid white;
+}
+
+
+@media (min-width: 800px) {
+    
+
+    .destination{
+        background-image: url(../../assets/images/destination/background-destination-desktop.jpg);
+    }
+
+    .heading{
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+        font-weight: bolder;
+        margin-block: 1rem;
+    }
+
+    .heading span{
+        margin-right: 1rem;
+    }
+
+}

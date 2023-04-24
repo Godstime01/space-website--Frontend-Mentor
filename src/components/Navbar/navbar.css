@@ -1,0 +1,107 @@
+:root{
+    --link_size: 1rem;
+    --desktop_padding: 3rem;
+    --tablet_padding: 2rem;
+    --mobile_padding: 1rem;
+
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+/* MOBILE DESIGN */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    position: fixed;
+    width: 100%;
+    padding: var(--mobile_padding);
+    z-index: 8888;
+}
+
+.navlinks{
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    /* margin-inline: 1rem; */
+    background-color: rgba(255, 255, 255, 0.165);
+    width: 100%;
+    max-width: 100%;
+    border-radius: .4rem;
+    backdrop-filter: blur(5px);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem 0rem;
+    padding: var(--mobile_padding);
+}
+
+.nav__link{
+    padding: var(--mobile_padding);
+}
+
+.nav__link span:nth-child(1){
+    display: none;
+}
+
+.toggle__btn{
+    display: flex;
+}
+
+/* TABLET  */
+
+/* DESKTOP DESIGNS */
+@media (min-width: 800px ) {
+    .navbar{
+        padding: 0;
+        padding-inline-end:0;
+        padding-inline-start: var(--desktop_padding);
+        position: fixed;
+        width: 100%;
+        flex-direction: row;
+    }
+    
+    .navlinks{
+        flex-direction: row;
+        gap: 2rem;
+        padding: 0;
+        position: static;
+        padding-block-start: var(--desktop_padding);
+        padding-inline: var(--desktop_padding);
+        border-radius: 0;
+        width: auto;
+        flex-basis: 500px;
+        display: flex !important;
+    }
+    
+    /* individual navigation anchor tags */
+    .nav__link{
+        padding: 0;
+        padding-block-end: var(--desktop_padding);
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+    
+    /* current active nav_link with class of active */
+    .nav__link.active{
+        border-bottom: 5px solid white;
+    }
+    
+    .nav__link span{
+        margin-right: 1rem; 
+    }
+    
+    /* numbers */
+    .nav__link span:nth-child(1){
+        font-weight: bolder;
+    }
+    
+    .toggle__btn{
+        display: none;
+    }
+    
+}
